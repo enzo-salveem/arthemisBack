@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist/out-tsc"  # Ajusta esto según tu configuración
+  functions = "dist/functions"  # Ajusta esto según tu configuración
+
+[dev]
+  command = "npm run dev"
+
+[[redirects]]
+  from= "/*"
+  to = "/app.js"
+  status=200
