@@ -9,15 +9,16 @@ const app = express();
 const port = process.env.PORT;
 app.use(express.json());
 app.use(cors());
-
+let router = express.Router();
 //handler(app);
-app.get("/", async (req, res, next) => {
+router.get("/", async (req, res, next) => {
   try {
     return res.json({ message: "Datos de servicios", data: ["..."] });
   } catch (err: any) {
     console.log(err.message);
   }
 });
+app.use('/hola',router)
 app.listen(443, async () => {
   console.log(`servicio arthemis back en linea`);
 });
