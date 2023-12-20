@@ -14,5 +14,5 @@ app.use(express.json());
 handler(app);
 
 app.listen(process.env.EXPRESS_PORT || 3000, async () => {
-  console.log(`servicio Commodito en el puerto: ${process.env.EXPRESS_PORT} `);
+  console.log(`servicio Commodito en el puerto: ${process.env.PORT} `);
 });
