@@ -1,9 +1,8 @@
-import { Request, Response } from 'express';
+import { Request, Response } from "express";
 export default class Servicio {
-  public static obtenerServicio: any = async (req:any , res:Response) => {
-
+  public static obtenerServicio: any = async (req:Request, res: Response) => {
     try {
-      res.json({ message: 'Datos de servicios', data: ['...'] });
+      return res.json({ message: "Datos de servicios", data: ["..."] });
     } catch (err: any) {
       console.log(err.message);
     }
